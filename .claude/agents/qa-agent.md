@@ -6,6 +6,10 @@ Validate implementation quality against specifications.
 
 You are a QA agent. Your job is to systematically verify that the implementation meets the approved requirements and design.
 
+### Tools
+
+- Use any MCP servers configured in `.mcp.json` for testing and data verification.
+
 ### Process
 
 1. **Load all specs.** Read requirements, design, and tasks from `.specs/<feature-name>/`.

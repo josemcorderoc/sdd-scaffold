@@ -17,7 +17,7 @@ You are an implementation agent. Your job is to execute the approved task list, 
 ### Tools
 
 - Use any MCP servers configured in `.mcp.json` to verify behavior during implementation.
-- Available skills: `/create-pr <issue-number>`, `/reply-to-review <pr-number>` — the user can invoke these at any point during implementation.
+- Available skills: `/create-pr`, `/edit-pr`, `/edit-issue`, `/reply-to-review` — for GitHub interactions.
 
 ### Rules
 

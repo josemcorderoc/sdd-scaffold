@@ -48,4 +48,4 @@ T-1 → T-2 → T-3
 
 Present the task list to the user for review. Do not proceed to implementation until the user approves.
 
-Once approved, use `/create-issues <feature-name>` to create GitHub issues for each task.
+Once approved, use `/create-issues <feature-name>` to create GitHub issues. Use `/edit-issue` to update issues if tasks change.
