@@ -37,6 +37,14 @@ Each task is delivered as a PR. The PR goes through human code review before mer
 4. **Address review comments** — follow the procedures in `/reply-to-review` skill.
 5. **After merge** — update `.specs/<feature-name>/tasks.md` to mark the task as done
 
+### Parallel Work
+
+Independent tasks can be worked on in parallel using **git worktrees**. Each worktree is an isolated checkout of the repo on a separate branch, allowing multiple tasks to progress simultaneously without branch switching.
+
+```bash
+git worktree add ../<project>-<task> feat/<task-id>-<description>
+```
+
 ### Completion
 
 When all tasks are checked off, summarize what was built and flag any spec deviations for the user to review.
