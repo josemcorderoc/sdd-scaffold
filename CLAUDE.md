@@ -22,7 +22,7 @@ This project follows **Spec Driven Development (SDD)**. See agents in `.claude/a
 - **Review at phase gates.** Present output to the human for approval before moving on.
 - **Keep specs anchored.** When implementation reveals spec gaps, update the spec first.
 - **Specs live in `.specs/`** organized by feature. Output formats are defined in each agent.
-- **Traceability via GitHub labels.** Each task in `tasks.md` lists traced IDs (FR, DD, NFR, EC). The `/create-issues` skill creates GitHub issues with corresponding labels (`req:FR-001`, `dd:DD-003`, etc.) for queryable traceability.
+- **Traceability.** Each task in `tasks.md` lists traced IDs (FR, DD, NFR, EC) in its Traces field. The `/create-issues` skill maps these to the issue tracker.
 
 ## Conventions
 
