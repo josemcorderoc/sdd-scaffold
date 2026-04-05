@@ -8,6 +8,7 @@ This template provides the structure, agents, and workflow to take a project fro
 
 ```
 .claude/agents/
+├── init-agent.md              # Phase 0: Configure conventions and MCP servers
 ├── requirements-agent.md      # Phase 1: Ideas → structured requirements
 ├── critique-agent.md          # Adversarial review at any phase gate
 ├── design-agent.md            # Phase 2: Requirements → technical design
@@ -43,14 +44,14 @@ Each phase produces a spec document. The **critique agent** challenges the outpu
 ### Getting Started
 
 1. **Use this template** to create your new project repo
-2. **Edit `CLAUDE.md`** — replace "Project Name" with your project name and add project-specific conventions (tech stack, data sources, etc.)
-3. **Add MCP servers** to `.mcp.json` for your stack (database connectors, Playwright, etc.)
-4. **Start the workflow** — describe your idea to Claude Code, then run the `requirements-agent`
+2. **Run `/init-agent`** — it will ask about your conventions, tech stack, and configure CLAUDE.md and MCP servers
+3. **Start the workflow** — describe your idea to Claude Code, then run the `requirements-agent`
 
 ### The Workflow Loop
 
 ```
 You: "I want to build [idea]"
+Claude: runs init-agent → configures CLAUDE.md and .mcp.json
 Claude: runs requirements-agent → produces .specs/feature/requirements.md
 Claude: runs critique-agent → challenges the requirements
 Claude: revises → critique again → iterate until stable
@@ -75,35 +76,10 @@ Claude: runs qa-agent → validates against specs
 
 ## Customization
 
-### Adding project-specific conventions
+The `init-agent` handles most configuration interactively. To customize manually:
 
-Add to the `### Development Conventions` section in `CLAUDE.md`:
-
-```markdown
-- **Python tooling** — uv for dependency management, SQLAlchemy 2.x + Alembic for DB
-- **Wikimedia compliance** — polite User-Agent, prefer dump files over API
-```
-
-### Adding MCP servers
-
-Create `.mcp.json` in your project root:
-
-```json
-{
-  "mcpServers": {
-    "playwright": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@playwright/mcp@latest"]
-    },
-    "postgres": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@bytebase/dbhub", "--dsn", "postgresql://user:pass@localhost:5432/db"]
-    }
-  }
-}
-```
+- **Conventions** — edit the `## Conventions` section in `CLAUDE.md`
+- **MCP servers** — edit `.mcp.json` in your project root
 
 ## License
 

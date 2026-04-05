@@ -1,23 +1,6 @@
 # Project Name
 
-## Project
-
-<!-- Fill in your project description, tech stack, and project-specific rules -->
-
-### Tech Stack
-
-- **Backend** — ...
-- **Frontend** — ...
-- **Database** — ...
-- **Testing** — ...
-
-### Project-Specific Rules
-
-<!-- Add rules unique to your project (e.g., API compliance, data policies) -->
-
-### MCP Servers
-
-Configured in `.mcp.json`. Add servers relevant to your stack (e.g., Playwright for E2E testing, database connectors for queries during development).
+<!-- Run `init-agent` to configure this file -->
 
 ## Workflow
 
@@ -25,6 +8,7 @@ This project follows **Spec Driven Development (SDD)**. See agents in `.claude/a
 
 ### Phases
 
+0. **Init** — Run `init-agent` once to configure conventions and MCP servers
 1. **Requirements** — `requirements-agent` → **critique-agent** loop → user approves
 2. **Design** — `design-agent` → **critique-agent** loop → user approves
 3. **Tasks** — `task-creator-agent` → **critique-agent** loop → user approves
@@ -41,11 +25,4 @@ This project follows **Spec Driven Development (SDD)**. See agents in `.claude/a
 
 ## Conventions
 
-- **Clean Architecture** — Separate entities, use cases, interfaces, infrastructure. Dependencies point inward.
-- **Test Driven Development** — Tests first. Red → Green → Refactor.
-- **Conventional Commits** — `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`, `ci:`
-- **Semantic Versioning** — `vMAJOR.MINOR.PATCH`
-- **Feature branches + PRs** — No direct commits to `main`. All work via PRs with human review.
-- **GitHub** — Use `gh` CLI for branches, PRs, and issues.
-- **Latest versions** — Use the latest stable version of all dependencies. Pin in lock files.
-- **SKILL.md** — Capture reusable patterns at the end of significant features.
+<!-- Populated by init-agent. Run it to configure. -->
