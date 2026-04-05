@@ -23,6 +23,11 @@ This template provides the structure, agents, and workflow to take a project fro
     ├── design.md              # Design document template
     └── tasks.md               # Task breakdown template
 
+.claude/skills/
+├── create-pr/SKILL.md         # /create-pr <issue> — create PR linked to issue
+├── reply-to-review/SKILL.md   # /reply-to-review <pr> — address review comments
+└── create-issues/SKILL.md     # /create-issues <feature> — create issues from tasks
+
 .github/
 └── PULL_REQUEST_TEMPLATE.md   # Standardized PR format
 

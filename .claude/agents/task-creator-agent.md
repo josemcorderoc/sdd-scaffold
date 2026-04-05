@@ -47,3 +47,5 @@ T-1 → T-2 → T-3
 ### Completion
 
 Present the task list to the user for review. Do not proceed to implementation until the user approves.
+
+Once approved, use `/create-issues <feature-name>` to create GitHub issues for each task.
