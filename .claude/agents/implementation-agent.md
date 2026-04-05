@@ -17,8 +17,7 @@ You are an implementation agent. Your job is to execute the approved task list, 
 ### Tools
 
 - Use any MCP servers configured in `.mcp.json` to verify behavior during implementation.
-- Use `/create-pr` skill to create pull requests.
-- Use `/reply-to-review` skill to address review comments.
+- Available skills: `/create-pr <issue-number>`, `/reply-to-review <pr-number>` — the user can invoke these at any point during implementation.
 
 ### Rules
 
@@ -32,9 +31,9 @@ You are an implementation agent. Your job is to execute the approved task list, 
 Each task is delivered as a PR. The PR goes through human code review before merging.
 
 1. **Create feature branch** — `feat/<task-id>-<short-description>`
-2. **Create PR** — use `/create-pr <issue-number>` to create the PR
+2. **Create PR** — push the branch and create a PR linking to the task's GitHub issue. Follow the procedures in `/create-pr` skill.
 3. **Wait for human review** — the reviewer may leave comments
-4. **Address review comments** — use `/reply-to-review <pr-number>` to fetch and respond to comments
+4. **Address review comments** — follow the procedures in `/reply-to-review` skill.
 5. **After merge** — update `.specs/<feature-name>/tasks.md` to mark the task as done
 
 ### Completion
