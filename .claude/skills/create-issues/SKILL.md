@@ -7,41 +7,27 @@ argument-hint: "[feature-name]"
 
 ## Create GitHub Issues from Tasks
 
-Read the task breakdown and specs to create fully-traced GitHub issues with traceability labels.
+Read the task breakdown and specs to create GitHub issues with traceability labels.
 
 ### Steps
 
 1. **Read the specs:**
-   - `.specs/$ARGUMENTS/tasks.md` — task list
+   - `.specs/$ARGUMENTS/tasks.md` — tasks with Traces field
    - `.specs/$ARGUMENTS/requirements.md` — FR/NFR/EC IDs
    - `.specs/$ARGUMENTS/design.md` — DD IDs
 
 2. **Create labels** (if they don't exist):
-   - Phase labels: `phase:1-bootstrap`, `phase:2-domain`, etc.
-   - Requirement labels: `req:FR-001`, `req:FR-002`, etc. (one per requirement referenced by any task)
-   - Design decision labels: `dd:DD-001`, `dd:DD-002`, etc.
-   - NFR labels: `nfr:NFR-001`, etc.
-   - Edge case labels: `ec:EC-1`, etc.
-   - Use `gh label create "<label>" --force` for each
+   - Phase: `phase:1-bootstrap`, `phase:2-domain`, etc.
+   - Requirements: `req:FR-001`, etc.
+   - Design decisions: `dd:DD-001`, etc.
+   - NFRs: `nfr:NFR-001`, etc.
+   - Edge cases: `ec:EC-1`, etc.
 
 3. **For each task**, create a GitHub issue:
    - Title: `T-XX: <title>`
-   - Labels: phase label + all applicable `req:`, `dd:`, `nfr:`, `ec:` labels
-   - Body:
-     ```
-     **Phase:** <phase name>
-     **Dependencies:** <task IDs or "none">
+   - Labels: phase + all `req:`, `dd:`, `nfr:`, `ec:` from the task's Traces field
+   - Body: dependencies + description + acceptance criteria as checkboxes
 
-     ## Description
-     <task description summary>
+4. **Add to project** if one exists
 
-     ## Acceptance Criteria
-     - [ ] ...
-     ```
-   - Use `gh issue create --title "..." --label "phase:...,req:FR-001,dd:DD-003,..." --body "..."`
-
-4. **Add to project** (if a GitHub project exists):
-   - List projects: `gh project list --owner OWNER --format json`
-   - Add each issue: `gh project item-add PROJECT_NUMBER --owner OWNER --url ISSUE_URL`
-
-5. **Report** the list of created issues with their numbers and labels
+5. **Report** created issues
