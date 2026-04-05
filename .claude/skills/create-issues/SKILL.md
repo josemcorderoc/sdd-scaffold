@@ -21,4 +21,5 @@ Read the task breakdown from `.specs/$ARGUMENTS/tasks.md` and create GitHub issu
 4. **Add to project** (if a GitHub project exists):
    - List projects: `gh project list --owner OWNER --format json`
    - Add each issue: `gh project item-add PROJECT_NUMBER --owner OWNER --url ISSUE_URL`
-5. **Report** the list of created issues with their numbers
+5. **Update traceability** — fill in the "Tasks → Issues" section in `.specs/$ARGUMENTS/traceability.md` mapping each task to its GitHub issue number
+6. **Report** the list of created issues with their numbers

@@ -22,6 +22,7 @@ This project follows **Spec Driven Development (SDD)**. See agents in `.claude/a
 - **Review at phase gates.** Present output to the human for approval before moving on.
 - **Keep specs anchored.** When implementation reveals spec gaps, update the spec first.
 - **Specs live in `.specs/`** organized by feature. Templates in `.specs/_template/`.
+- **Traceability.** Each feature has a `traceability.md` mapping requirements → design → tasks → issues → PRs. Each agent updates it when producing output.
 
 ## Conventions
 
