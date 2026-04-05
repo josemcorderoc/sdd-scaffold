@@ -32,9 +32,10 @@ Each task is delivered as a PR. The PR goes through human code review before mer
 
 1. **Create feature branch** — `feat/<task-id>-<short-description>`
 2. **Create PR** — push the branch and create a PR linking to the task's GitHub issue. Follow the procedures in `/create-pr` skill.
-3. **Wait for human review** — the reviewer may leave comments
-4. **Address review comments** — follow the procedures in `/reply-to-review` skill.
-5. **After merge** — update `.specs/<feature-name>/tasks.md` to mark the task as done
+3. **Run test plan** — after PR is created, run `/test-plan <pr-number>` to execute and verify all test plan items.
+4. **Wait for human review** — the reviewer may leave comments
+5. **Address review comments** — follow the procedures in `/reply-to-review` skill.
+6. **After merge** — update `.specs/<feature-name>/tasks.md` to mark the task as done
 
 ### Parallel Work
 
