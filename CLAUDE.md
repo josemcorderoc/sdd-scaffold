@@ -21,7 +21,7 @@ This project follows **Spec Driven Development (SDD)**. See agents in `.claude/a
 - **Never skip phases.** Each phase produces a spec that the next phase consumes.
 - **Review at phase gates.** Present output to the human for approval before moving on.
 - **Keep specs anchored.** When implementation reveals spec gaps, update the spec first.
-- **Specs live in `.specs/`** organized by feature. Templates in `.specs/_template/`.
+- **Specs live in `.specs/`** organized by feature. Output formats are defined in each agent.
 - **Traceability via GitHub labels.** Each task in `tasks.md` lists traced IDs (FR, DD, NFR, EC). The `/create-issues` skill creates GitHub issues with corresponding labels (`req:FR-001`, `dd:DD-003`, etc.) for queryable traceability.
 
 ## Conventions

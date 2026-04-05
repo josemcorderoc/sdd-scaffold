@@ -17,16 +17,12 @@ This template provides the structure, agents, and workflow to take a project fro
 ├── qa-agent.md                # Phase 5: Code → validation and review
 └── bug-fix-agent.md           # Phase 6: Issues → fixes
 
-.specs/
-└── _template/
-    ├── requirements.md        # Requirements document template
-    ├── design.md              # Design document template
-    └── tasks.md               # Task breakdown template
-
 .claude/skills/
 ├── create-pr/SKILL.md         # /create-pr <issue> — create PR linked to issue
+├── edit-pr/SKILL.md           # /edit-pr <pr> — edit PR title, body, labels
 ├── reply-to-review/SKILL.md   # /reply-to-review <pr> — address review comments
-└── create-issues/SKILL.md     # /create-issues <feature> — create issues from tasks
+├── create-issues/SKILL.md     # /create-issues <feature> — create issues from tasks
+└── edit-issue/SKILL.md        # /edit-issue <issue> — edit issue title, body, labels
 
 .github/
 └── PULL_REQUEST_TEMPLATE.md   # Standardized PR format
