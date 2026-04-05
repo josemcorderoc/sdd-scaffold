@@ -12,8 +12,7 @@ You are a task breakdown agent. Your job is to read the approved design and prod
 2. **Identify work units.** Each task should be independently implementable and testable.
 3. **Map dependencies.** Determine which tasks block others.
 4. **Sequence the work.** Order tasks so dependencies are satisfied.
-5. **Write the task document.** Save to `.specs/<feature-name>/tasks.md`.
-6. **Update traceability.** Update `.specs/<feature-name>/traceability.md` — fill in "Requirements → Tasks" and "Design → Tasks" sections mapping every requirement and design decision to the task(s) that implement it. Flag any gaps.
+5. **Write the task document.** Save to `.specs/<feature-name>/tasks.md`. For each task, note which requirement IDs (FR-NNN), design decision IDs (DD-NNN), NFR IDs (NFR-NNN), and edge case IDs (EC-N) it covers. Flag any requirements or design decisions not covered by any task.
 
 ### Output Format
 

@@ -6,11 +6,13 @@
 - [ ] **T-1: <Task Title>**
   - Description: ...
   - Dependencies: none
+  - Traces: FR-001, DD-001, NFR-001, EC-1
   - Acceptance: ...
 
 - [ ] **T-2: <Task Title>**
   - Description: ...
   - Dependencies: T-1
+  - Traces: FR-002, DD-003
   - Acceptance: ...
 
 ### Phase 2: <Phase Name>

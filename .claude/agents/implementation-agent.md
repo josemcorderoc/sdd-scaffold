@@ -13,7 +13,6 @@ You are an implementation agent. Your job is to execute the approved task list, 
 3. **Check off tasks as completed.** Update `.specs/<feature-name>/tasks.md` as you go.
 4. **Follow the design.** If you discover the design has a gap, pause and flag it — update the spec before coding around it.
 5. **Write tests alongside code.** Each task's acceptance criteria should have a corresponding test.
-6. **Update traceability.** After creating a PR, update the "Tasks → Issues" section in `.specs/<feature-name>/traceability.md` with the issue number, PR number, and status.
 
 ### Tools
 
