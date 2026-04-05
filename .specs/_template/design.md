@@ -13,9 +13,9 @@
 <!-- Endpoints, request/response shapes, error handling. -->
 
 ## Key Decisions
-| Decision | Choice | Rationale |
-|----------|--------|-----------|
-| ... | ... | ... |
+| ID | Decision | Choice | Rationale |
+|----|----------|--------|-----------|
+| DD-001 | ... | ... | ... |
 
 ## Security Considerations
 - ...
